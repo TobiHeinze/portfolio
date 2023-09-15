@@ -1,0 +1,141 @@
+.footer-container {
+  background-color: rgba(20, 29, 47, 1);
+  max-height: 250px;
+  border-top: 4px solid rgba(112, 230, 28, 1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 3vw;
+  padding-bottom: 3vw;
+
+  p {
+    font-size: 23px;
+  }
+}
+
+.footer-logo {
+  overflow: hidden;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 1px solid rgba(112, 230, 28, 1);
+  height: 70px;
+  width: 120px;
+  margin-bottom: 8px;
+  a {
+    img {
+      height: 80px;
+      width: 128px;
+      margin-left: -10px;
+
+      &:hover {
+        transition: 400ms;
+        cursor: pointer;
+        transform: scale(1.25);
+      }
+    }
+  }
+}
+
+.logo-with-imprint {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  a {
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    font-size: 1.7vw;
+
+    &:hover {
+      color: rgba(112, 230, 28, 1);
+    }
+
+    p {
+      font-size: 16px;
+      margin-top: 0.3vw;
+      margin-bottom: 0;
+      line-height: 20px;
+    }
+  }
+}
+
+.footer-link-container {
+  display: flex;
+  align-items: center;
+  gap: 3vw;
+
+  img {
+    margin-bottom: -0.5vw;
+    width: 2.5vw;
+    height: 2.5vw;
+    min-width: 30px;
+    min-height: 30px;
+
+    &:hover {
+      transform: scale(1.3);
+      transition: ease-in-out 125ms;
+    }
+  }
+}
+
+
+
+@media (max-width: 700px) {
+  .footer-container {
+    flex-direction: column;
+    max-height: 280px;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    p {
+      font-size: 18px;
+      margin: 8px;
+    }
+  }
+
+  .footer-logo {
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+
+  .footer-link-container {
+    width: 45%;
+    justify-content: space-between;
+  }
+
+  .d-none-700 {
+    padding-bottom: 24px;
+
+    a {
+      text-decoration: none;
+      color: white;
+      font-weight: 400;
+      font-size: 16px;
+
+      &:hover {
+        color: rgba(112, 230, 28, 1);
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-link-container {
+    width: 55%;
+  }
+}
+
+@media (max-width: 500px) {
+  .d-none-700 {
+    a {
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+}

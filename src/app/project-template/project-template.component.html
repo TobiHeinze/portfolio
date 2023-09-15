@@ -1,0 +1,12 @@
+<div class="project-container p-lr"  [class.direction]="project.direction">
+	<img src="{{  project.image  }}" alt="">
+	<div class="project-description-with-btn" [class.direction-content]="project.direction">
+		<h4>{{  project.name  }}</h4>
+		<h5>{{  project.codebase  }}</h5>
+		<p>{{ project.description  }}</p>
+			<div class="portfolio-btn" [class.portfolio-btn-direction]="project.direction">
+				<a class="btn-blue" target="_blank" href="{{  project.link  }}">Live test</a>
+				<a class="btn-border" target="_blank" href="{{  project.github  }}">Github</a>
+			</div>
+	</div>
+</div>

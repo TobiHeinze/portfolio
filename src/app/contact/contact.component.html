@@ -1,0 +1,88 @@
+<div id="contact" class="contact-container">
+
+	<img class="shadow6-purple" src="./assets/img/shadow6-purple-left.svg" alt="">
+
+	<div class="contact-header">
+		<div class="contact-line"></div>
+		<h3>Contact</h3>
+	</div>
+
+	<div class="contact-section p-lr">
+		<div class="contact-text">
+			<h4>Got a problem to solve?</h4>
+			<p>You can contact me through this form. I'm interested in your ideas and eager to contribute to your
+				projects.</p>
+			<p>Need a Frontend developer? <b>Contact me!</b></p>
+		</div>
+		<div class="contact-input">
+
+			<form class="form-container" [formGroup]="form">
+				<div class="form-group">
+					<input id="name" formControlName="name"
+						[ngClass]="{'active': form.get('name')!.hasError('required') && form.get('name')!.touched, 'valid': form.get('name')!.valid}"
+						type="text" formControlName="name" placeholder="Your name">
+					<img src="./assets/img/checkmark.svg" *ngIf="form.get('name')!.valid" class="checkmark" alt="Valid">
+					<img src="./assets/img/attention.svg"
+						*ngIf="form.get('name')!.invalid  && form.get('name')!.touched" class="checkmark" alt="">
+					<div class="error-message"
+						[ngClass]="{'active': form.get('name')!.hasError('required') && form.get('name')!.touched}">
+						Please enter your name.
+					</div>
+				</div>
+
+				<div class="form-group">
+					<input id="email" formControlName="email"
+						[ngClass]="{'active': (form.get('email')!.hasError('required') || form.get('email')!.hasError('email')) && form.get('email')!.touched, 'valid': form.get('email')!.valid}"
+						type="email" formControlName="email" placeholder="Your email">
+					<img src="./assets/img/checkmark.svg" *ngIf="form.get('email')!.valid" class="checkmark"
+						alt="Valid">
+					<img src="./assets/img/attention.svg"
+						*ngIf="form.get('email')!.invalid  && form.get('email')!.touched" class="checkmark" alt="">
+					<div class="error-message"
+						[ngClass]="{'active': (form.get('email')!.hasError('required') || form.get('email')!.hasError('email')) && form.get('email')!.touched}">
+						Please enter your email address.
+					</div>
+				</div>
+
+				<div class="form-group">
+					<textarea id="message" formControlName="message"
+						[ngClass]="{'active': form.get('message')!.hasError('required') && form.get('message')!.touched, 'valid': form.get('message')!.valid}"
+						type="text" formControlName="message" placeholder="Your message" rows="7"></textarea>
+					<img src="./assets/img/checkmark.svg" *ngIf="form.get('message')!.valid" class="checkmark"
+						alt="Valid">
+					<img src="./assets/img/attention.svg"
+						*ngIf="form.get('message')!.invalid  && form.get('message')!.touched" class="checkmark" alt="">
+					<div class="error-message"
+						[ngClass]="{'active': form.get('message')!.hasError('required') && form.get('message')!.touched}">
+						Please enter your message.
+					</div>
+				</div>
+
+				<div class="btn-container-send">
+					<div *ngIf="!loading && !showSuccessMessage">
+						<div type="submit" class="btn-green-send" (click)="sendMail()" [class.disabled]="!form.valid">
+							Send message :)</div>
+					</div>
+					<div *ngIf="loading">
+						<div class="spinner-circle"></div>
+					</div>
+					<div *ngIf="showSuccessMessage" class="btn-blue-send-message">
+						Your message was sent!
+					</div>
+				</div>
+			</form>
+
+
+
+
+		</div>
+
+
+	</div>
+	<div class="scroll-btn p-lr">
+		<a href="#intro"><img src="./assets/img/scroll-btn-white.svg"
+				onmouseover="src='./assets/img/scroll-btn-green.svg'"
+				onmouseout="src='./assets/img/scroll-btn-white.svg'" alt=""> </a>
+	</div>
+
+</div>

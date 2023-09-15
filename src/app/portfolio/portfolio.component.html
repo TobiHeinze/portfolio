@@ -1,0 +1,16 @@
+<div id="portfolio" class="portfolio-container">
+
+	<img class="shadow4-purple" src="./assets/img/shadow4-purple-left.svg" alt="">
+	<img class="shadow5-green" src="./assets/img/shadow5-green-right.svg" alt="">
+
+	<div class="portfolio-description">
+		<div class="portfolio-header p-l">
+			<div class="portfolio-line-left"></div>
+			<h3>Portfolio</h3>
+			<div class="portfolio-line-right"></div>
+		</div>
+		<p>This page is a sample of my work - please feel free to try them out.</p>
+	</div>
+
+	<app-project-template *ngFor="let project of projects" [project]="project"></app-project-template>
+</div>

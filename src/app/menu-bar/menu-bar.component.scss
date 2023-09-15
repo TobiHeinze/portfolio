@@ -1,0 +1,39 @@
+.menu-bar {
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7.5vh;
+  padding-top: 110px;
+  z-index: 1;
+  position: fixed;
+  height: calc(100vh - 110px);
+  // flex: 1;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  animation: slideLeft 500ms;
+
+  a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+
+    :hover {
+      color: rgba(112, 230, 28, 1);
+    }
+
+    h4 {
+      color: white;
+    }
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    right: -100%;
+  }
+
+  to {
+    right: 0%;
+  }
+}

@@ -1,0 +1,24 @@
+<div class="p-lr header">
+
+	<div class="intro" routerLink="/">
+		<a href="#intro" (click)="closeMenu()"><img src="./assets/img/logo.jpeg" alt=""></a>
+	</div>
+
+	<div class="nav-section mobile-hidden-600">
+		<div routerLink="/">
+			<a href="#aboutMe">About me</a>
+		</div>
+		<div routerLink="/">
+			<a href="#skills">Skills</a>
+		</div>
+		<div routerLink="/">
+			<a href="#portfolio">Portfolio</a>
+		</div>
+	</div>
+
+	<div class="burger-menu d-none-600" (click)="main.toggleMenu()">
+		<img *ngIf="main.closedMenuBar" src="./assets/img/burger-menu-open.svg" routerLink="/menu" alt="">
+		<img *ngIf="!main.closedMenuBar" src="./assets/img/burger-menu-closed.svg" routerLink="/" alt="">
+	</div>
+
+</div>
